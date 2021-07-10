@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@200;300;400&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* ------------------------- global ----------------------------- */
+  /* ------------------------- 500 page specific ----------------------------- */
+}
+
+body #__next {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .btn:focus {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+body .server-error {
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+}
+
+body .server-error h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 10rem;
+  line-height: 10rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+body .server-error h2 {
+  font-family: "Encode Sans Semi Condensed", Verdana, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+body .server-error h1,
+body .server-error h2 {
+  transition: opacity 0.5s linear, margin-top 0.5s linear;
+  -webkit-transition: opacity 0.5s linear, margin-top 0.5s linear;
+  /* Safari */
+}
+
+body .server-error .loading h1,
+body .server-error .loading h2 {
+  margin-top: 0px;
+  opacity: 0;
+}
+
+body .server-error .gears {
+  position: relative;
+  margin: 0 auto;
+  width: auto;
+  height: 170px;
+}
+
+body .server-error .gear {
+  position: relative;
+  z-index: 0;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: red;
+}
+
+body .server-error .gear:before {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  z-index: 2;
+  content: "";
+  border-radius: 50%;
+  background: #eaeaea;
+}
+
+body .server-error .gear:after {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  z-index: 3;
+  content: "";
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #eaeaea;
+}
+
+body .server-error .gear.one {
+  left: -130px;
+}
+
+body .server-error .gear.two {
+  top: -75px;
+}
+
+body .server-error .gear.three {
+  top: -235px;
+  left: 130px;
+}
+
+body .server-error .gear .bar {
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  z-index: 0;
+  width: 150px;
+  height: 30px;
+  margin-top: -15px;
+  border-radius: 5px;
+  background: black;
+}
+
+body .server-error .gear .bar:before {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  z-index: 1;
+  content: "";
+  border-radius: 2px;
+  background: #eaeaea;
+}
+
+body .server-error .gear .bar:nth-child(2) {
+  transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+}
+
+body .server-error .gear .bar:nth-child(3) {
+  transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+}
+
+@-webkit-keyframes clockwiseError {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(30deg);
+  }
+  40% {
+    -webkit-transform: rotate(25deg);
+  }
+  60% {
+    -webkit-transform: rotate(30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@keyframes clockwiseError {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(30deg);
+  }
+  40% {
+    -webkit-transform: rotate(25deg);
+  }
+  60% {
+    -webkit-transform: rotate(30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes anticlockwiseErrorStop {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(-30deg);
+  }
+  60% {
+    -webkit-transform: rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@keyframes anticlockwiseErrorStop {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(-30deg);
+  }
+  60% {
+    -webkit-transform: rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes anticlockwiseError {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(-30deg);
+  }
+  40% {
+    -webkit-transform: rotate(-25deg);
+  }
+  60% {
+    -webkit-transform: rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@keyframes anticlockwiseError {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(-30deg);
+  }
+  40% {
+    -webkit-transform: rotate(-25deg);
+  }
+  60% {
+    -webkit-transform: rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+body .server-error .gear.one {
+  animation: anticlockwiseErrorStop 2s linear infinite;
+  -webkit-animation: anticlockwiseErrorStop 2s linear infinite;
+}
+
+body .server-error .gear.two {
+  animation: anticlockwiseError 2s linear infinite;
+  -webkit-animation: anticlockwiseError 2s linear infinite;
+}
+
+body .server-error .gear.three {
+  animation: clockwiseError 2s linear infinite;
+  -webkit-animation: clockwiseError 2s linear infinite;
+}
+/*# sourceMappingURL=styles.css.map */

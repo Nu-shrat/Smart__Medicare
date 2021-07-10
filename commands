@@ -1,0 +1,11 @@
+git:
+    git status
+    git add .
+    git commit -m "commit message -author"
+
+prisma:
+    npx prisma studio
+    npx prisma migrate dev --name mgrnname
+
+versioning:
+    npm --no-git-tag-version version patch

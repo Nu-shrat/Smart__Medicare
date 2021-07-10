@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@200;300;400&display=swap");
+
+html {
+	scroll-behavior: smooth;
+}
+
+$bgDark: #d9e3ed;
+$mainColor: #eaeaea;
+$strokeColor: black;
+
+body {
+	margin: 0;
+	padding: 0;
+	// background-color: $bgDark;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	#__next {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.btn:focus {
+		outline: none !important;
+		box-shadow: none !important;
+	}
+
+	/* ------------------------- global ----------------------------- */
+
+	// .im {
+	// 		font: normal normal normal 16px/1 "iconmonstr-iconic-font";
+	// 	}
+
+	.server-error {
+		backdrop-filter: blur(7px);
+
+		h1 {
+			font-family: "Quicksand", sans-serif;
+			font-size: 10rem;
+			line-height: 10rem;
+			font-weight: 200;
+			text-align: center;
+		}
+		h2 {
+			font-family: "Encode Sans Semi Condensed", Verdana, sans-serif;
+			font-size: 1.5rem;
+			font-weight: 200;
+			text-align: center;
+		}
+		h1,
+		h2 {
+			transition: opacity 0.5s linear, margin-top 0.5s linear;
+			-webkit-transition: opacity 0.5s linear, margin-top 0.5s linear; /* Safari */
+		}
+		.loading h1,
+		.loading h2 {
+			margin-top: 0px;
+			opacity: 0;
+		}
+		.gears {
+			position: relative;
+			margin: 0 auto;
+			width: auto;
+			height: 170px;
+		}
+		.gear {
+			position: relative;
+			z-index: 0;
+			width: 120px;
+			height: 120px;
+			margin: 0 auto;
+			border-radius: 50%;
+			background: red;
+		}
+		.gear:before {
+			position: absolute;
+			left: 5px;
+			top: 5px;
+			right: 5px;
+			bottom: 5px;
+			z-index: 2;
+			content: "";
+			border-radius: 50%;
+			background: $mainColor;
+		}
+		.gear:after {
+			position: absolute;
+			left: 25px;
+			top: 25px;
+			z-index: 3;
+			content: "";
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			border: 5px solid $strokeColor;
+			box-sizing: border-box;
+			background: $mainColor;
+		}
+		.gear.one {
+			left: -130px;
+		}
+		.gear.two {
+			top: -75px;
+		}
+		.gear.three {
+			top: -235px;
+			left: 130px;
+		}
+		.gear .bar {
+			position: absolute;
+			left: -15px;
+			top: 50%;
+			z-index: 0;
+			width: 150px;
+			height: 30px;
+			margin-top: -15px;
+			border-radius: 5px;
+			background: $strokeColor;
+		}
+		.gear .bar:before {
+			position: absolute;
+			left: 5px;
+			top: 5px;
+			right: 5px;
+			bottom: 5px;
+			z-index: 1;
+			content: "";
+			border-radius: 2px;
+			background: $mainColor;
+		}
+		.gear .bar:nth-child(2) {
+			transform: rotate(60deg);
+			-webkit-transform: rotate(60deg);
+		}
+		.gear .bar:nth-child(3) {
+			transform: rotate(120deg);
+			-webkit-transform: rotate(120deg);
+		}
+		@keyframes clockwiseError {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+			20% {
+				-webkit-transform: rotate(30deg);
+			}
+			40% {
+				-webkit-transform: rotate(25deg);
+			}
+			60% {
+				-webkit-transform: rotate(30deg);
+			}
+			100% {
+				-webkit-transform: rotate(0deg);
+			}
+		}
+		@keyframes anticlockwiseErrorStop {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+			20% {
+				-webkit-transform: rotate(-30deg);
+			}
+			60% {
+				-webkit-transform: rotate(-30deg);
+			}
+			100% {
+				-webkit-transform: rotate(0deg);
+			}
+		}
+		@keyframes anticlockwiseError {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+			20% {
+				-webkit-transform: rotate(-30deg);
+			}
+			40% {
+				-webkit-transform: rotate(-25deg);
+			}
+			60% {
+				-webkit-transform: rotate(-30deg);
+			}
+			100% {
+				-webkit-transform: rotate(0deg);
+			}
+		}
+		.gear.one {
+			animation: anticlockwiseErrorStop 2s linear infinite;
+			-webkit-animation: anticlockwiseErrorStop 2s linear infinite;
+		}
+		.gear.two {
+			animation: anticlockwiseError 2s linear infinite;
+			-webkit-animation: anticlockwiseError 2s linear infinite;
+		}
+		.gear.three {
+			animation: clockwiseError 2s linear infinite;
+			-webkit-animation: clockwiseError 2s linear infinite;
+		}
+	}
+
+	/* ------------------------- 500 page specific ----------------------------- */
+}
