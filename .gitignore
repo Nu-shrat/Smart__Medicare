@@ -19,6 +19,13 @@
 .DS_Store
 *.pem
 /test.*
+/*/test.*
+resource-links
+todo
+boilerplate.*
+boilerplate*.*
+*.dbs
+*.bak
 
 # debug
 npm-debug.log*

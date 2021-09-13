@@ -1,13 +1,14 @@
 import Head from "next/head"
 
-import AppNavbar from "@components/AppNavbar"
+import AppNavbar from "@components/app/AppNavbar"
+import Footer from "@components/app/Footer"
 
 export interface AppLayoutProps {}
 
 const AppLayout: React.FC<AppLayoutProps> = ({ children }: any) => {
 	const headerVariables = {
 		url: "",
-		title: "",
+		title: "Quick Hospitalization",
 		description: "",
 		twitterDescription: "",
 		imgUrl: "",
@@ -19,16 +20,27 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }: any) => {
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 				<title>{headerVariables.title}</title>
-				<link
+				{/* <link
 					rel="shortcut icon"
 					href="/media/assets/favicon.png"
 					type="image/x-icon"
-				/>
+				/> */}
 				<link rel="stylesheet" href="/bootstrap/bootstrap.min.css" />
 				<script defer src="/bootstrap/jquery-3.6.0.slim.min.js"></script>
 				<script defer src="/bootstrap/bootstrap.bundle.min.js"></script>
 
 				{/* <!-- bootstrap 4.6 --> */}
+
+				<link rel="stylesheet" href="/lib/animate.min.css" />
+
+				{/* <!-- animate 4.1.1 - animation library --> */}
+
+				<link
+					rel="stylesheet"
+					href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+				>
+					{/* <!-- bootstrap icons --> */}
+				</link>
 
 				<link
 					rel="stylesheet"
@@ -66,7 +78,6 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }: any) => {
 					content={headerVariables.twitterDescription}
 				/>
 				<meta name="twitter:image" content={headerVariables.imgUrl} />
-				{/* <meta name="twitter:creator" content="@" /> */}
 
 				{/* <!-- Twitter --> */}
 			</Head>
@@ -74,6 +85,8 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }: any) => {
 			<AppNavbar />
 
 			{children}
+
+			<Footer />
 		</>
 	)
 }
