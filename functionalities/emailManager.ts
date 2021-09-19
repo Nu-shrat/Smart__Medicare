@@ -7,7 +7,7 @@ const sendEmail = async (To: string, Subject: string, Body: string) => {
 		return await send(
 			To,
 			Subject,
-			`This email is automatically generated from internal system of Quick Hospitalization, do not reply. 
+			`This email is automatically generated from internal system of Smart Medicare, do not reply. 
             Your OTP is: ${OTP}. If you haven't requested for the OTP, take necessary steps immediately!`
 		)
 	},

@@ -468,7 +468,7 @@ const UserSignup: React.FC<UserSignupProps> = () => {
 	return (
 		<>
 			<Head>
-				<title>Sign Up | Quick Hospitalization</title>
+				<title>Sign Up | Smart Medicare</title>
 				{/* <!-- Icons CSS --> */}
 				<link
 					rel="stylesheet"

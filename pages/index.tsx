@@ -51,7 +51,7 @@ const Home: React.FC<HomeProps> = ({ vacantBedInfo }) => {
 	return (
 		<>
 			<Head>
-				<title>Home | Quick Hospitalization</title>
+				<title>Home | Smart Medicare</title>
 			</Head>
 			<main>
 				<section className="row mx-0 pb-4 pb-sm-0">

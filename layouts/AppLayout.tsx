@@ -8,7 +8,7 @@ export interface AppLayoutProps {}
 const AppLayout: React.FC<AppLayoutProps> = ({ children }: any) => {
 	const headerVariables = {
 		url: "",
-		title: "Quick Hospitalization",
+		title: "Smart Medicare",
 		description: "",
 		twitterDescription: "",
 		imgUrl: "",
