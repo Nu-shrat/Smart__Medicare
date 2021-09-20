@@ -46,7 +46,7 @@ const AppNavbar: React.FC<AppNavbarProps> = () => {
 			<nav className="navbar navbar-expand-md navbar-light bg-light shadow sticky-top mb-3 justify-content-center bg-faded">
 				<div className="container">
 					<a className="navbar-brand" href="/">
-						Quick Hospitalization
+						Smart Medicare
 					</a>
 					<button
 						className="navbar-toggler ml-auto"

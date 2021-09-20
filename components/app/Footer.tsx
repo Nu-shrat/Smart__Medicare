@@ -9,7 +9,7 @@ const Footer: React.SFC<FooterProps> = () => {
 			<section className="container py-3">
 				<div className="row">
 					<div className="col-lg-6 col-md-12 mb-4 mb-md-3">
-						<h5>Quick Hospitalization</h5>
+						<h5>Smart Medicare</h5>
 						<p className="mx-auto mt-2" style={{ maxWidth: "320px" }}>
 							It is a platform where one can search and book for available
 							hospital beds, ICU beds, cabin, VIP cabins etc. at the time of
